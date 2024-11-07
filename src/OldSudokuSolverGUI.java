@@ -8,10 +8,25 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ *
+ *
+ *
+ *
+ *
+ *
+ * ##########################################
+ * ###Legacy file - reference only!!!!!######
+ * ##########################################
+ *
+ *
+ *
+ *
+ *
+ *
  * SudokuSolverGUI class integrates the Sudoku solver with a Java Swing GUI,
  * providing real-time visualization of the solving process.
  */
-public class SudokuSolverGUI extends JFrame {
+public class OldSudokuSolverGUI extends JFrame {
 
     private JTextArea arrayInputArea;
     private JTextField[][] gridInputFields;
@@ -29,7 +44,7 @@ public class SudokuSolverGUI extends JFrame {
     /**
      * Constructor to set up the GUI components.
      */
-    public SudokuSolverGUI() {
+    public OldSudokuSolverGUI() {
         setTitle("Sudoku Solver");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1000, 800);
@@ -694,10 +709,10 @@ public class SudokuSolverGUI extends JFrame {
      * Inner SudokuSolver class containing the solving logic with real-time updates.
      */
     public class SudokuSolver {
-        private SudokuSolverGUI gui; // Reference to the GUI for updates
+        private OldSudokuSolverGUI gui; // Reference to the GUI for updates
         private int sleepTime;
 
-        public SudokuSolver(SudokuSolverGUI gui, int sleepTime) {
+        public SudokuSolver(OldSudokuSolverGUI gui, int sleepTime) {
             this.gui = gui;
             this.sleepTime = sleepTime;
         }
@@ -826,7 +841,7 @@ public class SudokuSolverGUI extends JFrame {
 
         public SolverWorker(char[][] board, int sleepTime) {
             this.board = board;
-            this.solver = new SudokuSolver(SudokuSolverGUI.this, sleepTime);
+            this.solver = new SudokuSolver(OldSudokuSolverGUI.this, sleepTime);
         }
 
         @Override
@@ -847,19 +862,19 @@ public class SudokuSolverGUI extends JFrame {
         protected void done() {
             try {
                 if (isCancelled()) {
-                    JOptionPane.showMessageDialog(SudokuSolverGUI.this,
+                    JOptionPane.showMessageDialog(OldSudokuSolverGUI.this,
                             "Sudoku solving was stopped.",
                             "Stopped",
                             JOptionPane.WARNING_MESSAGE);
                 } else {
                     boolean solved = get();
                     if (solved) {
-                        JOptionPane.showMessageDialog(SudokuSolverGUI.this,
+                        JOptionPane.showMessageDialog(OldSudokuSolverGUI.this,
                                 "Sudoku Solved Successfully!",
                                 "Success",
                                 JOptionPane.INFORMATION_MESSAGE);
                     } else {
-                        JOptionPane.showMessageDialog(SudokuSolverGUI.this,
+                        JOptionPane.showMessageDialog(OldSudokuSolverGUI.this,
                                 "No solution exists for the given Sudoku board.",
                                 "Unsolvable",
                                 JOptionPane.ERROR_MESSAGE);
@@ -867,7 +882,7 @@ public class SudokuSolverGUI extends JFrame {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                JOptionPane.showMessageDialog(SudokuSolverGUI.this,
+                JOptionPane.showMessageDialog(OldSudokuSolverGUI.this,
                         "An error occurred while solving the Sudoku.",
                         "Error",
                         JOptionPane.ERROR_MESSAGE);
@@ -889,14 +904,14 @@ public class SudokuSolverGUI extends JFrame {
      *
      * @param args Command-line arguments.
      */
-    public static void main(String[] args) {
-        // Ensure the GUI is created on the Event Dispatch Thread
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                SudokuSolverGUI gui = new SudokuSolverGUI();
-                gui.setVisible(true);
-            }
-        });
-    }
+//    public static void main(String[] args) {
+//        // Ensure the GUI is created on the Event Dispatch Thread
+//        SwingUtilities.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                OldSudokuSolverGUI gui = new OldSudokuSolverGUI();
+//                gui.setVisible(true);
+//            }
+//        });
+//    }
 }
