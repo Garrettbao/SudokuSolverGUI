@@ -25,5 +25,6 @@ This Sudoku Solver uses a backtracking algorithm to fill in cells with potential
 
 **Code Structure**
 
-SudokuSolverGUI.py: Main file containing GUI setup and solving logic
-solver.py: Contains the backtracking algorithm for solving Sudoku puzzles
+SudokuSolverGUI.py: Main file containing GUI setup and solving logic. 
+
+SudokuSolver.py: Contains the backtracking algorithm for solving Sudoku puzzles
