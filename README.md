@@ -12,6 +12,10 @@ A graphical user interface (GUI) application for solving Sudoku puzzles using a 
 
 - **Java**
 
+## Running the Sudoku Solver
+
+Start the program by running **Main.java** under **src/view/**
+
 ## Usage
 
 ### 1. Input the Puzzle
