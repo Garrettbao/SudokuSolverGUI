@@ -29,6 +29,8 @@ The application provides two methods to input your Sudoku puzzle:
     - Navigate to the **"Paste Array"** tab.
     - Enter the numbers for the Sudoku puzzle in the text area. Use `.` for empty cells.
     - Ensure the board has exactly 9 rows and 9 columns.
+- **Example Inputs**:
+    - Example input arrays can be found in the txt file in the zip folder and in the project folder.
     - **Example**:
       ```
       [[5,3,.,.,7,.,.,.,.],
@@ -55,8 +57,8 @@ The application provides two methods to input your Sudoku puzzle:
 Once you have input the puzzle using either method, you have two options to solve it:
 
 - **Sleep time(ms)**:
-    - Set the sleep time to slow down the solving process
-    - Enter an integer from 1 to 100 for sleeping time in ms
+    - Enter an integer from 1 to 100 in the **"Sleep time input box"**.
+    - The solver will set the sleep time in ms to slow down the solving process.
 
 - **Solve With Animation**:
     - Click the **"Solve With Animation"** button.
